@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>History Of Your Recharges</h1>
+  <p>All the history are based on your previous recharges.</p> 
+</div>
+<i style="font-size: 18px;"> 
+<div class="container">
+  <div class="jumbotron text-center">
+  <h1>Mobile History</h1>
+</div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3></h3>
+      <p>
+      {% if mobile %}
+  {% for m in mobile %}
+  Recharged Number:- {{m.Enter_Your_Mobile_Number}} <br>
+  Recharge Type:- {{m.Recharge_Type}} <br>
+  Operator:- {{m.Operator}} <br>
+  Circle:- {{m.Circle}} <br>
+  Recharge Amount:- {{m.Recharge_Amount}}<br>
+  <br/><br/>
+  {% endfor %}
+  {% else %}
+  <h3>No match Found!!!!</h3>
+  {% endif %}  
+      </p>
+      
+    </div>
+   
+  </div>
+</div>
+
+
+
+
+<!-- For Datacard -->
+<div class="container">
+  <div class="jumbotron text-center">
+  <h1>Datacard History</h1>
+</div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3></h3>
+      <p>
+      {% if dth %}
+  {% for d in datacard %}
+  Card Number:- {{d.Data_Card_Number}} <br>
+  Operator:- {{d.Select_Datacard_Operator}} <br>
+  Amount Paid:- {{d.Recharge_Amount}} <br>
+  <br/><br/>
+  {% endfor %}
+  {% else %}
+  <h3>No match Found!!!!</h3>
+  {% endif %}  
+      </p>
+      
+    </div>
+   
+  </div>
+</div>
+
+
+
+
+<!-- For Dth -->
+<div class="container">
+  <div class="jumbotron text-center">
+  <h1>Dth History</h1>
+</div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3></h3>
+      <p>
+      {% if dth %}
+  {% for d in dth %}
+  Operator Used:- {{d.Select_DTH_Operator}} <br>
+  Customer Id:- {{d.Customer_id}} <br>
+  Amount Paid:- {{d.Recharge_Amount}} <br>
+  <br/><br/>
+  {% endfor %}
+  {% else %}
+  <h3>No match Found!!!!</h3>
+  {% endif %}  
+      </p>
+      
+    </div>
+   
+  </div>
+</div>
+
+
+
+<!-- For Metro -->
+<div class="container">
+  <div class="jumbotron text-center">
+  <h1>Metro History</h1>
+</div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3></h3>
+      <p>
+      {% if metro %}
+  {% for mt in metro %}
+  Metro Type:- {{mt.Select_Metro_Type}} <br>
+  Card Number:- {{mt.Card_Number}} <br>
+  Amount Paid:- {{mt.Recharge_Amount}} <br>
+  <br/><br/>
+  {% endfor %}
+  {% else %}
+  <h3>No match Found!!!!</h3>
+  {% endif %}  
+      </p>
+      
+    </div>
+   
+  </div>
+</div>
+
+</i>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

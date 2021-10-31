@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- For Mobile-->
+{% if mobileresult %}
+<i><h1 style="text-align: center;">Search result of {{show}} in Mobiles</h1></i>
+	<br>
+	<br>
+	<br>
+	<br>
+	<i><form style="text-align: center; font-size: 30px;">
+	
+	{% for m in mobileresult %}
+	Recharged Number:- {{m.Enter_Your_Mobile_Number}} <br>
+  	Recharge Type:- {{m.Recharge_Type}} <br>
+  	Operator:- {{m.Operator}} <br>
+  	Circle:- {{m.Circle}} <br>
+  	Recharge Amount:- {{m.Recharge_Amount}}<br>
+  <br/><br/>
+	{% endfor %}
+	{% else %}
+	<h3></h3> <!-- I m leaving blank here in else part but You can write anything according to Your requirements.-->
+	{% endif %}
+	</form></i>
+	<br><br>
+
+
+<!-- For Dth -->
+{% if dthrecharge %}
+<i><h1 style="text-align: center;">Search result of {{show}} in Dth</h1></i>
+	<br>
+	<br>
+	<i><form style="text-align: center; font-size: 30px;">
+
+	{% for d in dthrecharge %}
+  	Operator Used:- {{d.Select_DTH_Operator}} <br>
+  	Customer Id:- {{d.Customer_id}} <br>
+  	Amount Paid:- {{d.Recharge_Amount}} <br>
+  <br/><br/>
+	{% endfor %}
+	{% else %}
+	<h3></h3>
+	{% endif %}
+	</form></i>
+	<br><br>
+
+
+<!-- For Datacard -->
+{% if datacardrecharge %}
+<i><h1 style="text-align: center;">Search result of {{show}} in Datacard</h1></i>
+	<br>
+	<br>
+	<i><form style="text-align: center; font-size: 30px;">
+	
+	{% for d in datacardrecharge %}
+  	Card Number:- {{d.Data_Card_Number}} <br>
+  	Operator:- {{d.Select_Datacard_Operator}} <br>
+  	Amount Paid:- {{d.Recharge_Amount}} <br>
+  <br/><br/>
+	{% endfor %}
+	{% else %}
+	<h3></h3>
+	{% endif %}
+	</form></i>
+	<br><br>
+	<br><br>
+
+<!-- For Metro -->
+{% if metrorecharge %}
+<i><h1 style="text-align: center;">Search result of {{show}} in Metro</h1></i>
+	<br>
+	<br>
+	<i><form style="text-align: center; font-size: 30px;">
+	
+	{% for mt in metrorecharge %}
+  	Metro Type:- {{mt.Select_Metro_Type}} <br>
+  	Card Number:- {{mt.Card_Number}} <br>
+  	Amount Paid:- {{mt.Recharge_Amount}} <br>
+  <br/><br/>
+	{% endfor %}
+	{% else %}
+	<h3></h3>
+	{% endif %}
+	</form></i>
+	<br><br>
+
+
+
+
+</body>
+</html>
+
+
+
+

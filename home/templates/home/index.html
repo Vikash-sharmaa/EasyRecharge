@@ -1,0 +1,258 @@
+{% load static %}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="title icon" href="{% static 'home/image/site_icon.png' %}">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Easy Recharge a  Business Corporate Category Flat Bootstrap Responsive Website Template | Home</title>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+ <link rel="stylesheet" type="text/css" media="all" href="{% static 'home/css/bootstrap.css' %}"/>
+ <link rel="stylesheet" type="text/css" media="all" href="../../static/home/css/bootstrap.css">
+ <link rel="stylesheet" type="text/css" media="all" href="{% static 'home/css/style.css' %}"/>
+ <link rel="stylesheet" type="text/css" media="all" href="../../static/home/css/style.css">
+ <link rel="stylesheet" type="text/css" media="all" href="../../static/home/css/animate.css">
+ <link rel="stylesheet" type="text/css" media="all" href="{% static 'home/css/animate.css' %}"/>
+
+
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Easy Recharge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--//fonts-->	
+<!-- js -->
+<script src="../../static/home/js/jquery.min.js"></script>
+</head>
+<body>
+	
+<div class="banner">
+	<div class="header">
+			{% if user.is_authenticated %}
+			<!--<a href="{% url 'historyindex' %}" style="font-size: 20px;color: red;">History</a>-->
+			<a href="{% url 'historyindex' %}"><button type="button" class="btn btn-danger">History</button></a>
+			<font size="6" >Welcome {{request.user.username}}</font>
+			{% endif %}
+			<div class="logo">
+			 <h1><a href="index.html">EasyRecharge</a></h1>
+			</div>
+			<div class="top-nav">
+				<span class="menu"><img src="{% static 'home/image/menu.png' %}" alt="IMG"></span>
+				<ul class="nav1" class="active">
+					<li><a href="{% url 'mobileindex' %}">Mobile</a></li>
+					<li><a href="{% url 'datacardindex' %}">datacard</a></li>
+					<li><a href="{% url 'dthindex' %}">DTH</a></li>
+					<li><a href="{% url 'metroindex' %}">Metro</a></li>
+					{% if user.is_authenticated %}
+					<li><a href="javascript:{document.getElementById('logout').submit()}">Logout</a></li>
+					<form id="logout" method="POST" action="{% url 'logoutindex' %}" >
+					{% csrf_token %}
+					<input type="hidden">
+					</form>
+					{% else %}
+					<li><a href="{% url 'loginindex' %}">Login</a></li>
+					<li><a href="{% url 'registerindex' %}">Signup</a></li>
+					{% endif %}
+				</ul>
+						<!-- script-for-menu -->
+						 <script>
+						   $( "span.menu" ).click(function() {
+							 $( "ul.nav1" ).slideToggle( 300, function() {
+							 // Animation complete.
+							  });
+							 });
+						</script>
+						<!-- /script-for-menu -->
+			</div>
+			<!-- start search-->
+				    <div class="search-box">
+					    <div id="sb-search" class="sb-search">
+							<form method="GET" action="{% url 'searchindex' %}">
+								<input class="sb-search-input" placeholder="Find Your Recharge..." type="search" name="search" id="search">
+								<input class="sb-search-submit" type="submit" value="">
+								<span class="sb-icon-search"> </span>
+							</form>
+						</div>
+				    </div>
+					<!-- search-scripts -->
+					<script src="../../static/home/js/classie.js"></script>
+
+
+					<script src="../../static/home/js/uisearch.js"></script>
+
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+				<!-- //search-scripts -->
+				
+			
+			<div class="clearfix"> </div>
+	</div>
+	<div class="container">
+		{% if user.is_authenticated %}
+		<h3 style="text-align: right ;margin-right:-200px !important;"><a href="{% url 'password_change' %}"><button type="button" class="btn btn-primary">Change Password!!</button></a></h3>
+		{% endif %}
+		<div class="banner-info">
+			<h3>Low on balance ?<br> Recharge with easy recharge and win coupons and discounts </h3>
+		</div>
+		<div class="buttons">
+			<ul>
+				<!--
+				<li ><a class="hvr-shutter-in-vertical" href="{% url 'mobileindex' %}" style="border-radius:50px;"><i class="fa fa-mobile-phone fa-5x"></i></a></li>
+				-->
+				<li><a class="hvr-shutter-in-vertical" href="{% url 'mobileindex' %}"  style="border-radius:50px;" ><div class="tile-img-tag"><img src="https://fc-cdn.freecharge.in/pwa/images/home/mobile_2.png" alt="Freecharge Mobile recharge" class="tile-img"></div></a></li>
+				<li><a class="hvr-shutter-in-vertical" href="{% url 'dthindex' %}"  style="border-radius:50px;" ><div class="tile-img-tag"><img src="https://fc-cdn.freecharge.in/pwa/images/home/dth_2.png" alt="Freecharge DTH recharge" class="tile-img"></div><div class="tile-type"></div></a></li>
+				<li><a class="hvr-shutter-in-vertical" href="{% url 'dthindex' %}"  style="border-radius:50px;" ><div class="tile-img-tag"><img src="https://fc-cdn.freecharge.in/pwa/images/home/electricity_2.png" alt="Electricity bill payment on Freecharge" class="tile-img"></div></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="content-bottom">
+		<div class="btm-grids">
+			<div class="col-md-4 btm-grid back-col1 text-center">
+			<img  src="{% static 'home/image/bbbb.png' %}" alt="IMG">
+
+			</div>
+			<div class="col-md-4 btm-grid back-col3 text-center">
+				<img src="{% static 'home/image/bbb5.png' %}" alt="IMG">
+
+			</div>
+			<div class="col-md-4 btm-grid back-col2 text-center">
+				<img src="{% static 'home/image/bbb1.png' %}" alt="IMG">
+			</div>
+			<div class="clearfix"></div>
+		</div>
+</div>
+<div class="coupons">
+	<div class="container">
+		<div class="coupons-grids text-center">
+			<div class="col-md-3 coupons-gd">
+				<h3>RECHARGE IN <span>3 SIMPLE STEPS</span></h3>
+			</div>
+			<div class="col-md-3 coupons-gd">
+				<h4><span><img src="{% static 'home/image/web.png' %}" alt="IMG"></span></h4>
+				<p>LOGIN TO YOUR ACCOUNT</p>
+			</div>
+			<div class="col-md-3 coupons-gd">
+				<h4><span><img src="{% static 'home/image/credit.png' %}" alt="IMG"></span></h4>
+				<p>ENTER RECHARGE DETAILS</p>
+			</div>
+			<div class="col-md-3 coupons-gd">
+				<h4><span><img src="{% static 'home/image/security.png' %}" alt="IMG"></span></h4>
+				<p>MAKE PAYMENT</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<div class="content-bottom-two">
+		<div class="col-md-6 content-left text-center">
+		<img src="{% static 'home/image/bbb5.png' %}" alt="IMG">
+		</div>
+		<div class="col-md-6 content-right text-center">
+		<img src="{% static 'home/image/bbb3.png' %}" alt="IMG">
+		</div>
+		<div class="clearfix"></div>
+		<div class="btm-pos">
+			<h3>Exclusive Offers</h3>
+			<p> Nam libero tempore, cum soluta 
+			nobis est eligendi optio cumque 
+			nihil impedit quo minus id quod 
+			maxime placeat facere possimus, 
+			omnis voluptas assumenda est. </p>
+		</div>
+</div>
+<div class="footer-top">
+	<div class="container">
+		<div class="foo-grids">
+			<div class="col-md-3 foo-grid">
+				<h3>MOBILE RECHARGES</h3>
+				<ul>
+					<li><a href="#">Airtel</a></li>
+					<li><a href="#">Jio</a></li>
+					<li><a href="#">BSNL</a></li>
+					<li><a href="#">Idea</a></li>
+					<li><a href="#">MTNL</a></li>
+					<li><a href="#">MTS</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 foo-grid">
+				<h3>DTH RECHARGES</h3>
+				<ul>
+					<li><a href="#">Airtel Digital TV Recharges</a></li>
+					<li><a href="#">Dish TV Recharges</a></li>
+					<li><a href="#">Tata Sky Recharges</a></li>
+					<li><a href="#">Reliance Digital TV Recharges</a></li>
+					<li><a href="#">Sun Direct Recharges</a></li>
+					<li><a href="#">Videocon D2H Recharges</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 foo-grid">
+				<h3>DATACARD RECHARGES</h3>
+				<ul>
+					<li><a href="#">Airtel 4G Service</a></li>
+					<li><a href="#">Jio 4G Service</a></li>
+					<li><a href="#">BSNL 4G Service</a></li>
+					<li><a href="#">MTS MBlaze Recharges</a></li>
+					<li><a href="#">Tata Photon Plus Recharges</a></li>
+					<li><a href="#">Jio NetConnect Recharges</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 foo-grid">
+				<h3>PAYMENT OPTIONS</h3>
+				<ul>
+					<li>Credit Cards</li>
+					<li>Debit Cards</li>
+					<li>Any Visa Debit Card (VBV)</li>
+					<li>Direct Bank Debits</li>
+					<li>Cash Cards</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>	
+</div>
+
+<div class="footer">
+	<div class="container">
+		<h2><a href="index.html">Easy Recharge in Seconds</a></h2>
+		<p>© {% now 'Y' %} EasyRecharge </p>
+		<ul>
+			<li><a class="face1" href="#"></a></li>
+			<li><a class="face2" href="mailto:vikashs2000@gmail.com"></a></li>
+			<li><a class="face3" href="#"></a></li>
+			<li><a class="face4" href="#"></a></li>
+		</ul>
+	</div>
+</div>
+
+
+<!-- for bootstrap working -->
+
+	<script src="../../static/home/js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+</body>
+</html>
